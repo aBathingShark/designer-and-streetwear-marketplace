@@ -1,7 +1,7 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 var dataUtil = require("./data-util");
-var _ = require("underscore");
+var _ = require('underscore');
 var logger = require('morgan');
 var exphbs = require('express-handlebars');
 var app = express();
@@ -36,7 +36,7 @@ app.get("/create", function (req, res) {
 app.post('/api/create', function (req, res) {
   var body = req.body;
 
-  // Transform tags and content 
+  // Transform tags and content
   body.tags = body.tags.toLowerCase();
   body.tags = body.tags.split(" ");
   body.description = marked(body.description);
