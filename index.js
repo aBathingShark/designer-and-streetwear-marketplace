@@ -147,6 +147,18 @@ app.get('/listing/:title', function (req, res) {
   res.render('post', listings);
 });
 
+app.delete("/api/delete/:title", function (req, res) {
+  var _title = req.params.title;
+
+  var result = _.findWhere(_DATA, { title: _title })
+  if (!result) return res.json({});
+
+  var index = _.findIndex(_DATA, function(listing) { return listing.title == _title })
+  if (index !== -1) _DATA.splice(index, 1);
+  dataUtil.saveData(_DATA);
+  res.json(_DATA);
+});
+
 app.listen(process.env.PORT || 3000, function() {
   console.log('Listening!');
 });
