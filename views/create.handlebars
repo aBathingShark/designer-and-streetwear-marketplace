@@ -1,0 +1,42 @@
+<h1>Create a new listing</h1>
+<article>
+    <form method="POST" action="/create">
+        <div class="input-field">
+            <label>Brand:</label>
+            <input type="text" name="brand" size="50" placeholder="Brand, i.e. Nike">
+        </div>
+        <div class="input-field">
+            <label>Category:</label>
+            <select id="category" name="category">
+                <option value="Tops">Tops</option>
+                <option value="Bottoms">Bottoms</option>
+                <option value="Outerwear">Outerwear</option>
+                <option value="Footwear">Footwear</option>
+                <option value="Accessories">Accessories</option>
+            </select>
+        </div>
+        <div class="input-field">
+            <label>Item Name:</label>
+            <input type="text" name="item_name" size="50" placeholder="Item name">
+        </div>
+        <div class="input-field">
+            <label>Size:</label>
+            <input type="text" name="size" size="50" placeholder="Size">
+        </div>
+        <div class="input-field">
+            <label>Description:</label>
+            <textarea type="text" name="description" rows="20"
+                placeholder="Retail, Condition, Measurements, etc"></textarea>
+        </div>
+        <div class="input-field">
+            <label>Price:</label>
+            <span>$</span>
+            <input type="number" name="price" size="50" placeholder="Price (USD)">
+        </div>
+        <div class="input-field">
+            <label>Tags:</label>
+            <input type="text" name="tags" size="50" placeholder="Tag Tag Tag (space seperated)">
+        </div>
+        <button type="submit">Submit Listing</button>
+    </form>
+</article>

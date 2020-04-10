@@ -1,0 +1,22 @@
+{{#if tag}}
+<h2>Recent Posts in {{tag}}:</h2> 
+{{else}}
+<h2>Listings:</h2> 
+{{/if}}
+
+{{#each data}}
+<article class="listing">
+	<h2 class="title">{{this.title}} ${{this.price}}</h2> <i style="float:right;">{{this.category}}</i>
+	<hr>
+	<div class="content">
+	    {{{this.preview}}}
+	</div>
+	<a href="/listing/{{this.title}}">Read more...</a>
+</article>
+{{else}}
+
+<article>
+    <h1>There are no listings yet. :(</h1>
+    <a href="/create">Create your first listing!</a>
+</article>
+{{/each}}
