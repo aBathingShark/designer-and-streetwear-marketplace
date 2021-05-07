@@ -16,6 +16,6 @@
     "express-handlebars": "^3.0.0",
     "marked": "^0.8.2",
     "morgan": "^1.8.1",
-    "underscore": "^1.10.2"
+    "underscore": "^1.12.1"
   }
 }
